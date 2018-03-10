@@ -1,115 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
   <head>
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    
-    <title>{% if page.title %}{{ page.title }} – {% endif %}</title>
-    
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    {% include meta.html %}
 
-    <!-- Custom fonts for this template -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-
-    <!-- Custom styles for this template -->
-    <link href="css/clean-blog.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
   </head>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <body>
+    <div class="wrapper-masthead">
       <div class="container">
-        <a class="navbar-brand" href="{{ site.baseurl }}/index.html">Главная</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          Меню
-          <i class="fa fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="https://vk.com/club130416798">Блог</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ site.baseurl }}/contact.html">Контакты</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+        <header class="masthead clearfix">
+          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
 
-
-    <!-- Page Header -->
-    <header class="masthead" style="background-image: url('img/about-bg.jpg')">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
-            <div class="page-heading">
-              <h1>Сыны Отечества</h1>
-              <span class="subheading">
-              Наша молодежь - это наше будущее! И чем больше полезных навыков мы приобщим ей, тем уверенней будет наше будущее!
-              </span>
-            </div>
+          <div class="site-info">
+            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+            <p class="site-description">{{ site.description }}</p>
           </div>
-        </div>
-      </div>
-    </header>
 
-    <!-- Main Content -->
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <p>Томская региональная спортивно-патриотическая общественная организация «Сыны Отечества» Является региональным представителем «Совета ветеранов подразделений специального назначения»</p>
-          <p>Начала свою деятельность с августа 2016 года.</p>
-          <p>Члены и инструктора организации ветераны боевых действий и лица отслужившие в подразделениях спецназа.</p>
-          <p>Деятельность:</p>
-          <ul>
-              <li>Работа с ветеранами</li>
-              <li>Работа с молодежью и детьми</li>
-              <li>Проведение различных мероприятий по патриотической работе по все территории России</li>
-          </ul>
-  
-          <p>Наши инструктора с 2014 года участвуют во Всероссийском образовательном сборе кадетских корпусов и патриотических организаций «СОЮЗ-НАСЛЕДНИКИ ПОБЕДЫ»</p>
-          <p>На территории Томской области проводим уроки мужества, мастер классы, инструкторские сборы, Дни памяти. Проводим ежегодный Мемориальный марафон в честь памяти Кавалера ордена мужества Козлова Дмитрия Александровича. Принимаем участие в организации и проведение соревнований и турниров по различным видам спорта.</p>
-        </div>
+          <nav>
+            <a href="{{ site.baseurl }}/">Blog</a>
+            <a href="{{ site.baseurl }}/about">About</a>
+          </nav>
+        </header>
       </div>
     </div>
 
-    <hr>
+    <div id="main" role="main" class="container">
+      {{ content }}
+    </div>
 
-    <!-- Footer -->
-    <footer>
+    <div class="wrapper-footer">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
-            <ul class="list-inline text-center">
-              <li class="list-inline-item">
-                <a href="https://vk.com/club130416798">
-                  <img width="50" height="50" src="img/vkontakte-ic.png">
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="http://instagram.com/sonsofthefatherland">
-                  <img width="50" height="50" src="img/instagram-ic.png">
-                </a>
-              </li>
-            </ul>
-            <p class="copyright text-muted">ТРСПО &copy; Сыны Отечества 2018</p>
-          </div>
-        </div>
+        <footer class="footer">
+          {% include svg-icons.html %}
+        </footer>
       </div>
-    </footer>
+    </div>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    {% include analytics.html %}
   </body>
-
 </html>
