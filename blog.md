@@ -16,7 +16,7 @@ permalink: /blog/
         {{ post.description }}
       </h3>
     </a>
-    <p class="post-meta">Опубликовано {{ page.date | date: "%B %e, %Y" }}</p>
+    <p class="post-meta">Опубликовано {{ post.date | date: "%B %e, %Y" }}</p>
   </div>
   <hr>
 {% endfor %}
