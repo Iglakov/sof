@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Контакты
 description: Имеются вопросы? Свяжитесь с нами.
 image: contact-bg.jpg
