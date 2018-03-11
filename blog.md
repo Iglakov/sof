@@ -7,7 +7,7 @@ permalink: /blog/
 ---
 {% for post in site.posts %}
 
-  #[{{ post.title }}]({{ site.baseurl }}{{ post.url }})
+  # [{{ post.title }}]({{ site.baseurl }}{{ post.url }})
   {{ post.description }}.
   
 {% endfor %}
