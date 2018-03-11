@@ -2,7 +2,7 @@
 layout: default
 title: Новостной блог
 description: Последние события
-image: news-bg.jpg
+image: home-bg.jpg
 permalink: /news/
 ---
 
