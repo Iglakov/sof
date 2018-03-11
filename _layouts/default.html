@@ -23,36 +23,29 @@
   </head>
 
   <body>
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
-
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
-
-          <nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/about">About</a>
-          </nav>
-        </header>
+    {% include navigation.html %}
+    {% include header.html %}
+    
+       <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <p>Томская региональная спортивно-патриотическая общественная организация «Сыны Отечества» Является региональным представителем «Совета ветеранов подразделений специального назначения»</p>
+          <p>Начала свою деятельность с августа 2016 года.</p>
+          <p>Члены и инструктора организации ветераны боевых действий и лица отслужившие в подразделениях спецназа.</p>
+          <p>Деятельность:</p>
+          <ul>
+              <li>Работа с ветеранами</li>
+              <li>Работа с молодежью и детьми</li>
+              <li>Проведение различных мероприятий по патриотической работе по все территории России</li>
+          </ul>
+  
+          <p>Наши инструктора с 2014 года участвуют во Всероссийском образовательном сборе кадетских корпусов и патриотических организаций «СОЮЗ-НАСЛЕДНИКИ ПОБЕДЫ»</p>
+          <p>На территории Томской области проводим уроки мужества, мастер классы, инструкторские сборы, Дни памяти. Проводим ежегодный Мемориальный марафон в честь памяти Кавалера ордена мужества Козлова Дмитрия Александровича. Принимаем участие в организации и проведение соревнований и турниров по различным видам спорта.</p>
+        </div>
       </div>
     </div>
-
-    <div id="main" role="main" class="container">
-      {{ content }}
-    </div>
-
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          {% include header.html %}
-        </footer>
-      </div>
-    </div>
-
+    {% include footer.html %}
     {% include analytics.html %}
   </body>
 </html>
