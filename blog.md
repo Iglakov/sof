@@ -2,7 +2,7 @@
 layout: default
 title: Блог
 description: Список новостей
-image: contact-bg.jpg
+image: home-bg.jpg
 permalink: /blog/
 ---
 
