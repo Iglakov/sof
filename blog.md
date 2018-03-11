@@ -8,8 +8,5 @@ permalink: /blog/
 
 ## Список постов:
 {% for post in site.posts %}
-  ** [{{ post.title }}]({{ site.baseurl }}{{ post.url }}) **
-  {{ post.excerpt }}
-  
-  
+  * [{{ post.title }} - {{ post.description }}]({{ site.baseurl }}{{ post.url }})
 {% endfor %}
