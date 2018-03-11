@@ -3,7 +3,13 @@ layout: default
 ---
 {{ content }}
 <br>
-<script type="text/javascript">document.write(VK.Share.button(false,{type: "round_nocount", text: "Поделиться"}));</script>
+<script type="text/javascript">
+  document.write(VK.Share.button({
+    url: '{{ page.url }}',
+    title: '{{ page.title }}',
+    noparse: true
+  }));
+</script>
 <br>
 <div class="PageNavigation">
   {% if page.previous.url %}
