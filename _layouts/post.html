@@ -18,3 +18,12 @@ layout: default
     <a class="next" href="{{ site.baseurl }}{{ page.next.url }}">{{ page.next.title }} &raquo;</a>
   {% endif %}
 </div>
+
+<div class="row">
+  {% if page.previous.url %}
+    <div class="col-sm-5 col-md-6"><a class="prev" href="{{ site.baseurl }}{{ page.previous.url }}">&laquo; {{ page.previous.title }}</a></div>
+  {% endif %}
+  {% if page.next.url %}
+    <div class="col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-0"><a class="next" href="{{ site.baseurl }}{{ page.next.url }}">{{ page.next.title }} &raquo;</a></div>
+  {% endif %}
+</div>
