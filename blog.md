@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Блог
-description: Список новостей
-image: home-bg.jpg
-permalink: /blog/
+title: Новостной блог
+description: Последние события
+image: news-bg.jpg
+permalink: /news/
 ---
 
 {% for post in site.posts %}
@@ -16,7 +16,7 @@ permalink: /blog/
         {{ post.description }}
       </h3>
     </a>
-    <p class="post-meta">Опубликовано {{ post.date | date: "%B %e, %Y" }}</p>
+    <p class="post-meta">Опубликовано {{ post.date | date: "%Y-%m-%d" }}</p>
   </div>
   <hr>
 {% endfor %}
