@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Сыны Отечества
-subtitle: Победа любит подготовку!
+description: Победа любит подготовку!
 image: about-bg.jpg
 permalink: /
 ---
