@@ -4,12 +4,10 @@ layout: default
 {{ content }}
 <br>
 <script type="text/javascript">
-  document.write(VK.Share.button({
-    url: '{{ page.url }}',
-    title: '{{ page.title }}',
-    image: '{{ page.image }}',
-    noparse: false
-  }));
+  document.write(VK.Share.button(
+    {url: '{{ page.url }}', title: '{{ page.title }}', image: '{{ page.image }}', noparse: false},
+    {type: "round_nocount", text: "Поделиться"})
+  ));
 </script>
 <br>
 <div class="PageNavigation">
